@@ -10,12 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  -JDK_Version: '1.11'
+  JDK_Version: '1.11'
 
 steps:
 
 - script: echo Building for jdk $(JDK_Version)
-  displayName: Totally necessary info script
+  displayName: Debug script to check if my variable worked
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
